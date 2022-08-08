@@ -12,8 +12,6 @@ export const MainMenu = () => {
   const photos = useSelector(state => state.requestData.photos)
   const size = useWindowSize()
   let data = []
-  console.log(size)
-  console.log(window)
 
   if(users.length && posts.length && photos.length){ 
     users.map( user => {

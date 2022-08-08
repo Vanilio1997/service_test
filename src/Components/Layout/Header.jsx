@@ -18,13 +18,19 @@ export const Header = props => {
   return (
     <div className='header_Container'>
       <div >
-        <img className='header_Logo' src='/images/logo.png' alt="qwerty" />
+        {
+          size.width > 550
+          ?  
+        <img className='header_Logo' src='/images/logo.png' alt="notFound" />
+        :
+        <img className='header_LittleLogo' src='/images/little_logo.png' alt='notFound' />
+        } 
       </div>
       { mainMenu 
       ?
       <div style={{display: 'flex'}}>
         <div className='header__Container_UserName'>
-          { size.width > 769 
+          { size.width > 960 
           ? 
           <div  className='header_UserName'> {currentLogin} </div>
           :

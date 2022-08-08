@@ -32,6 +32,11 @@ html, body, #root, .App, .layout_Container {
     height: 63px;
     margin: 27px 37px;
 }
+.header_LittleLogo {
+    width: 70px;
+    height: 63px;
+    margin: 28px 15px;
+}
 
 
 .logInMenu_Block {
@@ -49,6 +54,8 @@ html, body, #root, .App, .layout_Container {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
 }
+
+
 
 .logInMenu_Heading_Container {
     width: 440px;
@@ -72,6 +79,7 @@ html, body, #root, .App, .layout_Container {
 
 .logInMenu_TextInput_Container {
     display: flex;
+    padding-left: 19px;
 }
 
 .logInMenu_TextInput_Container p {
@@ -86,7 +94,6 @@ html, body, #root, .App, .layout_Container {
     align-items: center;
     color: #000000;
     text-align: center;
-    padding-left: 19px;
 }
 
 .logInMenu_Input_Container {
@@ -131,33 +138,6 @@ html, body, #root, .App, .layout_Container {
     
 }
 
-@media (max-width:1000px) {
-    .post_Container {
-        width: 360px;
-        height: 470px;
-    }
-    .mainMenu_Container {
-        gap: 13px;
-    }
-}
-
-@media (max-width : 769px){
-    .post_Container {
-        width: 325px;
-    }
-}
-
-@media (max-width : 690px){
-    .mainMenu_Container {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    .post_Container {
-        height: 290px;
-        width: 292px;
-        word-wrap: break-word;
-    }
-}
 
 .postInfo_Header_Container {
     display: grid;
@@ -183,23 +163,7 @@ html, body, #root, .App, .layout_Container {
     height: 90px;
 }
 
-@media ( max-width : 690px ) {
-    .postInfo_Header_Container {
-        grid-template-columns: 1fr;
-    }
-    .post_UserName {
-        width: 258px;
-        height: 30px;
-    }
-    .post_CompanyName {
-        width: 231px;
-        height: 30px;
-    }
-    .post_Title {
-        width: 292px;
-        height: 200px;
-    }
-}
+
 
 .header__Container_UserName {
     display: flex;
@@ -229,3 +193,73 @@ html, body, #root, .App, .layout_Container {
     font-size: 800;
 }
 
+@media(max-width : 550px) {
+    .logInMenu_Container {
+        width: 290px;
+        height: 301px;
+        padding: 19px 39px;
+    }
+    .logInMenu_TextInput_Container{
+        display: block;
+        padding: 0;
+    }
+    .logInMenu_Input_Container{
+        margin: 6px 0;
+    }
+
+    .logInMenu_Text_Container{
+        width: 212px;
+        height: 39px;
+    }
+
+    .logInMenu_Text_Container{
+        display: flex;
+        align-items: center;
+    }
+    .logInMenu_Heading_Container{
+        width: 212px;
+        height: 45px;
+        margin: 0;
+        margin-bottom: 27px;
+    }
+    .logInMenu_TextInput_Container input {
+        width: 212px;
+        height: 39px;
+    }
+}
+
+@media ( max-width : 690px ) {
+    .postInfo_Header_Container {
+        grid-template-columns: 1fr;
+        height: 95px;
+    }}
+    @media (max-width:1000px) {
+        .post_Container {
+            width: 360px;
+            height: 470px;
+        }
+        .mainMenu_Container {
+            gap: 13px;
+        }
+    }
+    
+    @media (max-width : 769px){
+        .post_Container {
+            width: 325px;
+        }
+        .postInfo_Header_Container {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    @media (max-width : 690px){
+        .mainMenu_Container {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .post_Container {
+            height: 200px;
+            width: 292px;
+            word-wrap: break-word;
+        }
+    }
