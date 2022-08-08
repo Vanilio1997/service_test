@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchUsers, fetchPhotos, fetchPosts } from '../../Requests/Requests'
 
 
+
 export const MainMenu = () => {
   const dispatch = useDispatch()
   const users = useSelector(state => state.requestData.users)
@@ -36,6 +37,7 @@ export const MainMenu = () => {
     dispatch(fetchUsers())
     dispatch(fetchPhotos())
     dispatch(fetchPosts())
+    dispatch(dispatch({type:'MAIN_MENU' , payload: true}))
   }, [])
 
   return (

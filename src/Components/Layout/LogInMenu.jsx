@@ -12,8 +12,10 @@ export const LogInMenu = () => {
     const password = useSelector( state => state.login.password)
     const login = useSelector( state => state.login.login)
     const incorrectLogin = useSelector(state => state.login.incorrectLogin)
+    const mainMenu = useSelector (state => state.login.mainMenu)
     const state = useSelector (state => state)
     console.log(state)
+    console.log(mainMenu)
 
     const handlerkeyUp = (e) => {
         if (e.key === 'Enter') {
@@ -38,6 +40,7 @@ export const LogInMenu = () => {
                 incorrectLoginCheck(false)
                 navigate('/info')
                 clearFields()
+                dispatch({type:'MAIN_MENU' , payload: true})
             } else {
                 incorrectLoginCheck(true)
                 clearFields()
@@ -47,6 +50,7 @@ export const LogInMenu = () => {
 
     useEffect (() => { 
         loginInputRef.current.focus()
+        dispatch(dispatch({type:'MAIN_MENU' , payload: false}))
     }, [])
 
     return (

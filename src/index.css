@@ -154,6 +154,12 @@ html, body, #root, .App, .layout_Container {
     height: 90px;
 }
 
+.header__Container_UserName {
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+
 .header_UserName {
     width: 390px;
     font-family: 'Inter';
@@ -161,7 +167,18 @@ html, body, #root, .App, .layout_Container {
     font-weight: 800;
     font-size: 24px;
     line-height: 29px;
-    display: flex;
-    align-items: center;
     text-align: right;
 }
+
+.header_Container_Logout {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_Logout {
+    cursor: pointer;
+    font-size: 800;
+}
+
