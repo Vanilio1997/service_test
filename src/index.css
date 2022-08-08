@@ -128,6 +128,35 @@ html, body, #root, .App, .layout_Container {
     font-weight: 800;
     font-size: 16px;
     line-height: 19px;
+    
+}
+
+@media (max-width:1000px) {
+    .post_Container {
+        width: 360px;
+        height: 470px;
+    }
+    .mainMenu_Container {
+        gap: 13px;
+    }
+}
+
+@media (max-width : 769px){
+    .post_Container {
+        width: 325px;
+    }
+}
+
+@media (max-width : 690px){
+    .mainMenu_Container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .post_Container {
+        height: 290px;
+        width: 292px;
+        word-wrap: break-word;
+    }
 }
 
 .postInfo_Header_Container {
@@ -152,6 +181,24 @@ html, body, #root, .App, .layout_Container {
 .post_Info {
     margin-top: 24px;
     height: 90px;
+}
+
+@media ( max-width : 690px ) {
+    .postInfo_Header_Container {
+        grid-template-columns: 1fr;
+    }
+    .post_UserName {
+        width: 258px;
+        height: 30px;
+    }
+    .post_CompanyName {
+        width: 231px;
+        height: 30px;
+    }
+    .post_Title {
+        width: 292px;
+        height: 200px;
+    }
 }
 
 .header__Container_UserName {
